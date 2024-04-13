@@ -2,6 +2,7 @@
 
 namespace XattaTrone\LaravelBackupUi;
 
+use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
 
 class LaravelBackupUiServiceProvider extends ServiceProvider
@@ -14,9 +15,12 @@ class LaravelBackupUiServiceProvider extends ServiceProvider
     public function boot(): void
     {
         // $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'xatta-trone');
-        // $this->loadViewsFrom(__DIR__.'/../resources/views', 'xatta-trone');
+        $this->loadViewsFrom(__DIR__ . '/resources/views', 'xatta-trone');
         // $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-        // $this->loadRoutesFrom(__DIR__.'/routes.php');
+        // $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+        $this->registerRoutes();
+
+
 
         // Publishing is only necessary when using the CLI.
         if ($this->app->runningInConsole()) {
@@ -62,9 +66,9 @@ class LaravelBackupUiServiceProvider extends ServiceProvider
         ], 'laravel-backup-ui.config');
 
         // Publishing the views.
-        /*$this->publishes([
-            __DIR__.'/../resources/views' => base_path('resources/views/vendor/xatta-trone'),
-        ], 'laravel-backup-ui.views');*/
+        $this->publishes([
+            __DIR__ . '/resources/views/laravel-backups' => base_path('resources/views/vendor/xatta-trone/laravel-backups'),
+        ], 'laravel-backup-ui.views');
 
         // Publishing assets.
         /*$this->publishes([
@@ -79,4 +83,30 @@ class LaravelBackupUiServiceProvider extends ServiceProvider
         // Registering package commands.
         // $this->commands([]);
     }
+
+    /**
+     * Register routes with configurations
+     *
+     * @return void
+     */
+    protected function registerRoutes()
+    {
+        Route::group($this->routeConfiguration(), function () {
+            $this->loadRoutesFrom(__DIR__ . '/routes/web.php');
+        });
+    }
+
+    /**
+     * Route configurations
+     *
+     * @return array
+     */
+    protected function routeConfiguration()
+    {
+        return [
+            'prefix' => config('laravel-backup-ui.route_prefix', 'laravel-backups'),
+            'middleware' => config('laravel-backup-ui.route_middleware', []),
+        ];
+    }
+
 }
