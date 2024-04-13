@@ -36,7 +36,7 @@ By default, the application is available at: `{APP_URL}/laravel-backups`.
 
 ## Advanced usage
 ### Customize view
-Publish `log.blade.php` into `/resources/views/vendor/laravel-log-viewer/` for view customization:
+Publish `views` into `/resources/views/vendor/xatta-trone/` for view customization:
 
 ```bash
 php artisan vendor:publish \
