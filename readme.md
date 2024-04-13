@@ -45,7 +45,7 @@ php artisan vendor:publish \
 ``` 
 
 ### Edit configuration
-Publish `logviewer.php` configuration file into `/config/` for configuration customization:
+Publish `laravel-backup-ui.php` configuration file into `/config/` for configuration customization:
 
 ```bash
 php artisan vendor:publish \
