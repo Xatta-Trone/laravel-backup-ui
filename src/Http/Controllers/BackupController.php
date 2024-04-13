@@ -22,6 +22,12 @@ class BackupController extends Controller
 
     public function index(LaravelBackupUiIndexRequest $request)
     {
+
+        // check for configuration
+        if (config()->has('backup') == false) {
+            Session::flash('danger', 'Backup configuration not found. Please ensure you have installed `spatie/laravel-backup`');
+        }
+
         $disk = $request->input('disk') ?: $this->disks[0];
 
         $results = LaravelBackupUiService::getBackups(
@@ -39,6 +45,7 @@ class BackupController extends Controller
             LengthAwarePaginator::resolveCurrentPage(),
             array('path' => LengthAwarePaginator::resolveCurrentPath())
         );
+
         return view(
             'xatta-trone::laravel-backups.' . config('laravel-backup-ui.theme', 'bootstrap-4'),
             ['paginate' => $paginate, 'disks' => $this->disks]
