@@ -1,18 +1,19 @@
 {
   "name": "xatta-trone/laravel-backup-ui",
-  "description": ":package_description",
+  "description": "Manage your laravel-backups from one place",
   "license": "MIT",
   "authors": [
     {
-      "name": "Author Name",
-      "email": "author@email.com",
-      "homepage": "http://author.com"
+      "name": "Monzurul Islam",
+      "email": "monzurul.ce.buet@gmail.com",
+      "homepage": "https://github.com/Xatta-Trone"
     }
   ],
   "homepage": "https://github.com/xatta-trone/laravel-backup-ui",
   "keywords": [
     "Laravel",
-    "LaravelBackupUi"
+    "Laravel-backup",
+    "Laravel-backup-ui"
   ],
   "require": {
     "php": "^7.4|^8.0",

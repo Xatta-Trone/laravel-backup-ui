@@ -122,7 +122,7 @@
                     @endforelse
                 </tbody>
             </table>
-            {{ $paginate->withQueryString()->links('pagination::default') }}
+            {{ $paginate->withQueryString()->links() }}
         </div>
         {{-- Table End --}}
 

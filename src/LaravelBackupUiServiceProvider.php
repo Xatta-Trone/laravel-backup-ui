@@ -66,9 +66,9 @@ class LaravelBackupUiServiceProvider extends ServiceProvider
         ], 'laravel-backup-ui.config');
 
         // Publishing the views.
-        /*$this->publishes([
-            __DIR__.'/../resources/views' => base_path('resources/views/vendor/xatta-trone'),
-        ], 'laravel-backup-ui.views');*/
+        $this->publishes([
+            __DIR__ . '/resources/views/laravel-backups' => base_path('resources/views/vendor/xatta-trone/laravel-backups'),
+        ], 'laravel-backup-ui.views');
 
         // Publishing assets.
         /*$this->publishes([
