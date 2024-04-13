@@ -1,10 +1,11 @@
-# Laravel Backup UI
+<p align="center"><img src="./art/cover.png" alt="Social Card of Laravel Activity Log"></p>
 
-### Manage your laravel backups from one place
-
-[![MIT Licensed](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Total Downloads](https://img.shields.io/packagist/dt/xatta-trone/laravel-backup-ui.svg?style=flat-square)](https://packagist.org/packages/xatta-trone/laravel-backup-ui)
-
+<p align="center">
+<a href="https://packagist.org/packages/xatta-trone/laravel-backup-ui"><img src="https://img.shields.io/packagist/v/xatta-trone/laravel-backup-ui.svg?style=flat-square" alt="Packagist"></a>
+<a href="https://packagist.org/packages/xatta-trone/laravel-backup-ui"><img src="https://img.shields.io/packagist/dm/xatta-trone/laravel-backup-ui.svg?style=flat-square" alt="Packagist"></a>
+<a href="https://packagist.org/packages/xatta-trone/laravel-backup-ui"><img src="https://img.shields.io/packagist/php-v/xatta-trone/laravel-backup-ui.svg?style=flat-square" alt="PHP from Packagist"></a>
+<a href="https://packagist.org/packages/xatta-trone/laravel-backup-ui"><img src="https://img.shields.io/badge/Laravel-8.x-brightgreen.svg?style=flat-square" alt="Laravel Version"></a>
+</p>
 
 ### Features
 

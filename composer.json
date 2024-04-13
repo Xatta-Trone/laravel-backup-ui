@@ -2,6 +2,7 @@
   "name": "xatta-trone/laravel-backup-ui",
   "description": "Manage your laravel-backups from one place",
   "license": "MIT",
+  "type": "laravel-package",
   "authors": [
     {
       "name": "Monzurul Islam",
